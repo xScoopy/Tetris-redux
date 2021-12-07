@@ -20,7 +20,7 @@ export default function GridBoard(props) {
   useEffect(() => {
     requestRef.current = requestAnimationFrame(update);
     return () => cancelAnimationFrame(requestRef.current);
-  }, [isRunning]);
+  }, );
   const gridSquares = grid.map((rowArray, row) => {
     // map columns
     return rowArray.map((square, col) => {
